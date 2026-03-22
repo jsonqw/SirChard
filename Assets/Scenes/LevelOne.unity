@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 155627023}
   - component: {fileID: 155627024}
   - component: {fileID: 155627025}
+  - component: {fileID: 155627026}
   m_Layer: 7
   m_Name: Player1
   m_TagString: Player1
@@ -750,6 +751,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3151f2683374f2b4ebdb772dc5c6ed54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &155627026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155627015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1060708b3b94c40bb3029ab3d349b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: RED
+  playerObject: {fileID: 155627015}
+  scoreText: {fileID: 842520064}
+  score: 0
 --- !u!1 &206382490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1095,7 @@ GameObject:
   - component: {fileID: 305284836}
   - component: {fileID: 305284837}
   - component: {fileID: 305284838}
+  - component: {fileID: 305284839}
   m_Layer: 7
   m_Name: Player2
   m_TagString: Player2
@@ -1361,6 +1379,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3151f2683374f2b4ebdb772dc5c6ed54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &305284839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305284828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1060708b3b94c40bb3029ab3d349b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: BLUE
+  playerObject: {fileID: 305284828}
+  scoreText: {fileID: 1809795197}
+  score: 0
 --- !u!1 &329832419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,11 +2026,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 965428007950742590, guid: f2d2a75468b7fc745a588323e1062013, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 965428007950742590, guid: f2d2a75468b7fc745a588323e1062013, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 965428007950742590, guid: f2d2a75468b7fc745a588323e1062013, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2335,7 +2369,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 614823504}
-  - component: {fileID: 614823505}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -2358,18 +2391,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &614823505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614823503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f4a453935bc8d44b34d43def5a4df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &634603658
 GameObject:
   m_ObjectHideFlags: 0
@@ -4349,6 +4370,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Hazard
       objectReference: {fileID: 0}
+    - target: {fileID: 7450467448846137221, guid: fabd426e7436e954987c534d7f289455, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8877994975484808895, guid: fabd426e7436e954987c534d7f289455, type: 3}
       propertyPath: m_LocalScale.x
       value: 25
@@ -4367,11 +4392,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8877994975484808895, guid: fabd426e7436e954987c534d7f289455, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.831
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 8877994975484808895, guid: fabd426e7436e954987c534d7f289455, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2158113243956899349, guid: fabd426e7436e954987c534d7f289455, type: 3}
+    - {fileID: 65702495048144492, guid: fabd426e7436e954987c534d7f289455, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fabd426e7436e954987c534d7f289455, type: 3}
       insertIndex: -1
@@ -5610,6 +5640,7 @@ GameObject:
   - component: {fileID: 1289081961}
   - component: {fileID: 1289081969}
   - component: {fileID: 1289081970}
+  - component: {fileID: 1289081971}
   m_Layer: 7
   m_Name: Player3
   m_TagString: Player3
@@ -5928,6 +5959,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3151f2683374f2b4ebdb772dc5c6ed54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1289081971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289081960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1060708b3b94c40bb3029ab3d349b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: YELLOW
+  playerObject: {fileID: 1289081960}
+  scoreText: {fileID: 1832483770}
+  score: 0
 --- !u!1 &1315311887
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,6 +6413,7 @@ GameObject:
   - component: {fileID: 1679956150}
   - component: {fileID: 1679956158}
   - component: {fileID: 1679956159}
+  - component: {fileID: 1679956160}
   m_Layer: 7
   m_Name: Player4
   m_TagString: Player4
@@ -6685,6 +6733,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3151f2683374f2b4ebdb772dc5c6ed54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1679956160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679956149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1060708b3b94c40bb3029ab3d349b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: PURPLE
+  playerObject: {fileID: 1679956149}
+  scoreText: {fileID: 480365567}
+  score: 0
 --- !u!1 &1681845286
 GameObject:
   m_ObjectHideFlags: 0
